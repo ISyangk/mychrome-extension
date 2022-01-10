@@ -1,14 +1,14 @@
 <div align="center">
   <h1>
-    Extension Boilerplate  
+    扩展样板 
   </h1>
 
   <p>
-    <strong>A foundation for creating browser extensions for Chrome, Opera & Firefox.</strong>
+    <strong>为 Chrome、Opera 和 Firefox 创建浏览器扩展的基础。</strong>
   </p>
 </div>
 
-Now that Firefox supports WebExtensions, it has become a lot easier to build browser extensions/addons for multiple browsers without duplicating the codebase. This project serves as a sensible starting point to help you get started.
+现在 Firefox 支持 WebExtensions，在不复制代码库的情况下为多个浏览器构建浏览器扩展/插件变得更加容易。该项目是帮助您入门的明智起点。
 
 <div align="center">
   <a href="https://www.emailthis.me/open-source/extension-boilerplate">
@@ -16,55 +16,47 @@ Now that Firefox supports WebExtensions, it has become a lot easier to build bro
   </a>
 </div>
 
-I have extracted this from the browser extensions that I built for my side-project, [Email This](https://www.emailthis.me).
-
-> Side note: Do check out [**Email This**](https://www.emailthis.me). It is a simpler alternative to bookmarking tools like Pocket, Readability & Instapaper. Email This will remove ads & distractions from an article and send you a nice email with just the text/images. No need to install any additional applications or login to another app just to access your bookmarks. 
-The Chrome Extensions is available [on the Chrome Web Store](https://chrome.google.com/webstore/detail/email-this/lgblkllcjgihfnlefhnnpppndbbjallh).
-
-
-## Features
+## 功能
 
 <dl>
-  <dt>Write once and deploy to Chrome, Opera & Firefox</dt>
+  <dt>编写一次并部署到 Chrome、Opera 和 Firefox</dt>
   <dd>
-    Based on WebExtensions. It also includes a tiny polyfill to bring uniformity to the APIs exposed by different browsers.
+    基于 WebExtensions。它还包含一个微小的 polyfill，用于为不同浏览器公开的 API 带来统一性。
   </dd>
 </dl>
 
 <dl>
-  <dt>Live-reload</dt>
+  <dt>实时加载</dt>
   <dd>
-    Your changes to CSS, HTML & JS files will be relayed instantly without having to manually reload the extension. This ends up saving a lot of time and improving the developer experience.
+    您对 CSS、HTML 和 JS 文件的更改将立即被转发，而无需手动重新加载扩展。这最终节省了大量时间并改善了开发人员体验。
   </dd>
 </dl>
 
 <dl>
-  <dt>Sensible starting point</dt>
+  <dt>明智的起点</dt>
   <dd>
-    This comes with a gulp based workflow that converts modern <strong>ES6</strong> JavaScript and <strong>SCSS</strong> to JS/CSS. 
-    Scripts are transpiled using Babel and bundled using Browserify.
-    Sourcemaps are available for both JS and SCSS.
+    这带有一个基于 gulp 的工作流，可将现代ES6 JavaScript 和SCSS转换为 JS/CSS。脚本使用 Babel 转译并使用 Browserify 捆绑。Sourcemaps 可用于 JS 和 SCSS。
   </dd>
 </dl>
 
 <dl>
-  <dt>Sketch (.sketch) assets for icons and promo images</dt>
+  <dt>图标和宣传图片的草图 (.sketch) 资产</dt>
   <dd>
-    A .sketch file is included in the resources directory. This has all the icons and promo images that will be needed while uploading the extensions to the app stores.
+    .sketch 文件包含在资源目录中。这包含将扩展程序上传到应用程序商店时所需的所有图标和促销图片。
   </dd>
 </dl>
 
 <dl>
-  <dt>Easily configurable and extendable</dt>
+  <dt>易于配置和扩展</dt>
   <dd>
-    The gulpfile is easily understandable and configurable. If you want to add additional tasks or remove un-used ones, you can easily tweak that file to suit your needs.
+    gulpfile 很容易理解和配置。如果您想添加其他任务或删除未使用的任务，您可以轻松调整该文件以满足您的需要。
   </dd>
 </dl>
 
 <dl>
-  <dt>Platform specific & Environment specific variables.</dt>
+  <dt>特定于平台和特定于环境的变量。</dt>
   <dd>
-    You might need to specify different data variables based on your environment. For example, you might want to use a localhost API endpoint during development and a production API endpoint once the extension is submitted to the appstore. You can specify such data in the json files inside `config` directory.
+    您可能需要根据您的环境指定不同的数据变量。例如，您可能希望在开发期间使用 localhost API 端点，并在将扩展提交到应用商店后使用生产 API 端点。您可以在 `config` 目录中的 json 文件中指定此类数据。
 
     You can also set custom data variables based on the platform (different variable for Chrome, FF, Opera).
   </dd>
@@ -72,51 +64,43 @@ The Chrome Extensions is available [on the Chrome Web Store](https://chrome.goog
 
 
 
-## Installation
-1. Clone the repository `git clone https://github.com/EmailThis/extension-boilerplate.git`
-2. Run `npm install`
-3. Run `npm run build`
+## 安装
+1. 克隆存储库 `git clone https://github.com/EmailThis/extension-boilerplate.git`
+2. 执行 `npm install`
+3. 执行 `npm run build`
 
-Alternately, if you want to try out the sample extension, here are the download links. After you download it, unzip the file and load it in your browser using the steps mentioned below.
- - [**Download Chrome Extension**](https://github.com/EmailThis/extension-boilerplate/releases/download/v1.0/chrome.zip)
- - [**Download Opera Extension**](https://github.com/EmailThis/extension-boilerplate/releases/download/v1.0/opera.zip)
- - [**Download Firefox Extension**](https://github.com/EmailThis/extension-boilerplate/releases/download/v1.0/firefox.zip)
-
-
-##### Load the extension in Chrome & Opera
-1. Open Chrome/Opera browser and navigate to chrome://extensions
-2. Select "Developer Mode" and then click "Load unpacked extension..."
-3. From the file browser, choose to `extension-boilerplate/build/chrome` or (`extension-boilerplate/build/opera`)
+或者，如果您想试用示例扩展，这里是下载链接。下载后，解压缩文件并使用下面提到的步骤将其加载到浏览器中。
+ - [**下载Chrome扩展程序**](https://github.com/EmailThis/extension-boilerplate/releases/download/v1.0/chrome.zip)
+ - [**下载Opera扩展程序**](https://github.com/EmailThis/extension-boilerplate/releases/download/v1.0/opera.zip)
+ - [**下载Firefox扩展程序**](https://github.com/EmailThis/extension-boilerplate/releases/download/v1.0/firefox.zip)
 
 
-##### Load the extension in Firefox
-1. Open Firefox browser and navigate to about:debugging
-2. Click "Load Temporary Add-on" and from the file browser, choose `extension-boilerplate/build/firefox`
+##### 在 Chrome 和 Opera 中加载扩展
+1. 打开 Chrome/Opera 浏览器并导航到 chrome://extensions
+2. 选择“开发者模式”，然后点击“加载解压后的扩展...”
+3. 从文件浏览器中，选择 `extension-boilerplate/build/chrome` 或者 (`extension-boilerplate/build/opera`)
 
 
-## Developing
-The following tasks can be used when you want to start developing the extension and want to enable live reload - 
+##### 在 Firefox 中加载扩展
+1. 打开 Firefox 浏览器并导航到 about:debugging
+2. 单击“加载临时加载项”，然后从文件浏览器中选择 `extension-boilerplate/build/firefox`
+
+
+## 发展
+当您想要开始开发扩展并想要启用实时重新加载时，可以使用以下任务 -
 
 - `npm run chrome-watch`
 - `npm run opera-watch`
 - `npm run firefox-watch`
 
 
-## Packaging
-Run `npm run dist` to create a zipped, production-ready extension for each browser. You can then upload that to the appstore.
+## 打包
+运行 `npm run dist` 为每个浏览器创建一个压缩的、生产就绪的扩展。然后您可以将其上传到应用商店。
 
 
-## TODO
-- [ ] Add support for Safari
-- [x] Add Firefox & Opera Promo images
-- [x] Add sample screenshot templates
-- [ ] Write a guide for using config variables & JS preprocessor
+## 要做的
+- [ ] 添加对 Safari 的支持
+- [x] 添加 Firefox 和 Opera 促销图片
+- [x] 添加示例截图模板
+- [ ] 编写使用配置变量和 JS 预处理器的指南
 
-
------------
-This project is licensed under the MIT license. 
-
-If you have any questions or comments, please create a new issue. I'd be happy to hear your thoughts.
-
-
-Bharani, [Email This](https://www.emailthis.me)
